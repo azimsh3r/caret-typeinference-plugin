@@ -1,18 +1,18 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.azimsh3r.carettypeinferenceplugin</id>
-    <name>caret-typeinference-plugin</name>
+    <name>caret-typeinference</name>
     <vendor>azimsh3r</vendor>
 
-    <depends>com.intellij.modules.platform</depends>
+<!--    <depends>com.intellij.modules.platform</depends>-->
+    <depends>com.intellij.modules.python</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.azimsh3r.carettypeinferenceplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <statusBarWidgetFactory id="BuildNumber"
+                                implementation="com.github.azimsh3r.ui.VariableTypeStatusBarWidgetFactory"
+                                order="before Memory"/>
+        <postStartupActivity implementation="com.github.azimsh3r.PluginStartupActivity"/>
     </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.azimsh3r.carettypeinferenceplugin.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
 </idea-plugin>

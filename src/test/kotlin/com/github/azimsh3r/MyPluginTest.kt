@@ -1,4 +1,4 @@
-package com.github.azimsh3r.carettypeinferenceplugin
+package com.github.azimsh3r
 
 import com.intellij.ide.highlighter.XmlFileType
 import com.intellij.openapi.components.service
