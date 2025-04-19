@@ -28,6 +28,8 @@ The plugin listens for changes in the caret position within the editor. When the
 2. Analyzes the variable’s type using PyCharm's `TypeEvalContext`.
 3. Displays the inferred type in the status bar.
 
+![Caret Type Inference](image_2025-04-19_17-12-20.png)
+
 The plugin works by using PyCharm's PSI (Program Structure Interface) and PSI tree utilities to analyze the code's structure and determine the type of the variable at the caret's current position.
 
 ### Key Classes and Components
